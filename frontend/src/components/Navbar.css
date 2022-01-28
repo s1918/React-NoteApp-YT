@@ -1,0 +1,11 @@
+.link {
+    color : white;
+    text-decoration: none;
+    text-decoration: double;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: pink;
+}
+
