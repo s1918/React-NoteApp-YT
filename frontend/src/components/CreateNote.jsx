@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useNavigate} from "react-router-dom";
+import axios from "axios"; 
 
 function CreateNote() {
     let navigate = useNavigate();
@@ -22,7 +23,12 @@ function CreateNote() {
 
     function handleClick(event) {
         event.preventDefault();
-        console.log(input)
+        const newNote = {
+            title: input.title,
+            content: input.content
+        }
+
+        axios.post('http://localhost:3001/create', newNote)
     }
 
 
